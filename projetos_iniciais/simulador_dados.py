@@ -1,4 +1,7 @@
 # O usuário deverá escolher uma quantidade de dados e o tipo de dado.
+# Após escolher, o programa apresentará os números.
+
+# O usuário deverá escolher uma quantidade de dados e o tipo de dado.
 from random import randint
 
 quant_dados = int(input('Quantos dados você deseja? '))
