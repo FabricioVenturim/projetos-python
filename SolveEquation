@@ -1,0 +1,21 @@
+# Colocar uma equação e o programa reconhecer a equação
+# Operações válidas: [+, -, *, /]
+
+
+
+# Toda equação tem um sinal de =
+# Toda equação tem uma incógnita
+
+def operar(formula):
+
+    # Encontrar o sinal de = e dividir a equação em 2 partes
+    formula.split()
+    partes = formula.split('=')
+    
+    # Encontrar os operadores
+    # Decidir que operação seráfeita
+    # Retornar o valor da operaçao
+    return partes
+    
+formula = input('escreva a operação: ')
+operar(formula)
