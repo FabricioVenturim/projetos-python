@@ -24,15 +24,13 @@ def jogar():
         velha = False
         vencedor = False
         tabuleiro(p)
-
         while velha is False and vencedor is False:
-            lista_de_espaços = espaços_disponíveis(p)
-
             for k, v in peças.items():
+                lista_de_espaços = espaços_disponíveis(p)
                 jogada = int(input(f'{v}({k}) escolha um espaço: '))
                 while jogada not in lista_de_espaços: 
                     print('Por favor, digite em um espaço válido!')
-                    jogada = int(input(f'{peças[v]}({k}) escolha um espaço: '))
+                    jogada = int(input(f'{v}({k}) escolha um espaço: '))
                 p[jogada - 1] = k
                 tabuleiro(p)
                 if verifica_vencer(p) is True:
@@ -43,7 +41,6 @@ def jogar():
                     mensagem_velha()
                     velha = True
                     break
-
         print('''
         [ 1 ] Recomeçar a partida
         [ 2 ] Escolher outros competidores
@@ -60,6 +57,8 @@ def jogar():
         else:
             break
     print('Obrigado, Volte Sempre!!!!')
+
+
 # As funções dentro da função 'jogar' para que ela funcione
 def tabuleiro(lista):
     """ Faz um print do tabuleiro do jogo da velha """
