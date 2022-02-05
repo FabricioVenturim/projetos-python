@@ -13,50 +13,58 @@ def jogar():
         peça_player1 = int(input(f'''Desculpe {player1}, Você precisa escolher entre 1 e 2.
     Qual peça você deseja jogar? [1 - X | 2 - O ]: '''))
     if peça_player1 == 1:
-        peça_player1 = "X"
-        peça_player2 = "O"
-        vez_de_jogar = 1 # 1 - player1  2 - player2
+        peças = {'X': player1 ,'O': player2}
     else:
-        peça_player1 = "O"
-        peça_player2 = "X"
-        vez_de_jogar = 2 # 1 - player1  2 - player2
-
+        peças =  {'X': player2 ,'O': player1}
+    
     # Inicia o jogo
     p = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     velha = False
     vencedor = False
+    tabuleiro(p)
+
     while velha is False and vencedor is False:
-        tabuleiro(p)
-        if vez_de_jogar == 1:
-            jogada = int(input(f'{player1}({peça_player1}) escolha um espaço: ')) 
-            p[jogada - 1] = peça_player1
-            vez_de_jogar = 2
-        elif vez_de_jogar == 2:
-            jogada = int(input(f'{player2}({peça_player2}) escolha um espaço: ')) 
-            p[jogada - 1] = peça_player2 
-            vez_de_jogar = 1
-        
-        velha = verifica_velha(p)
+        lista_de_espaços = espaços_disponíveis(p)
 
-
+        for k, v in peças.items():
+            jogada = int(input(f'{v}({k}) escolha um espaço: '))
+            while jogada not in lista_de_espaços: 
+                print('Por favor, digite um espaço válido!')
+                jogada = int(input(f'{peças[v]}({k}) escolha um espaço: '))
+            p[jogada - 1] = k
+            tabuleiro(p)
+            velha = verifica_velha(p)
+            if velha is True:
+                break
+                
 # As funções dentro da função 'jogar' para que ela funcione
-def tabuleiro(list):
+def tabuleiro(lista):
     """ Faz um print do tabuleiro do jogo da velha """
     return print(f'''
-     {list[0]} | {list[1]} | {list[2]}
+     {lista[0]} | {lista[1]} | {lista[2]}
     ---|---|---
-     {list[3]} | {list[4]} | {list[5]}
+     {lista[3]} | {lista[4]} | {lista[5]}
     ---|---|---
-     {list[6]} | {list[7]} | {list[8]}
+     {lista[6]} | {lista[7]} | {lista[8]}
     ''')
 
 
-def verifica_velha(list):
+def verifica_velha(lista):
     """Verifica de o jogo deu velha"""    
-    for item in list:
+    for item in lista:
         if isinstance(item, int):
           return False
     return True
+
+
+def espaços_disponíveis(lista):
+    """ Atualiza e mostra os espaços disponíveis para os jogadores colocarem as peças"""
+    lista_de_espaços = []
+    for item in lista:
+        if isinstance(item,int):
+            lista_de_espaços.append(item)
+    return lista_de_espaços
+
 
 jogar()
 
