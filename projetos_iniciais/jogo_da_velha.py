@@ -1,6 +1,5 @@
 # Jogo da Velha - a princípio 1x1 
 
-
 def jogar():
     """Onde tudo funciona"""
     # Escolher os nomes dos jogadores
