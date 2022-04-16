@@ -1,1 +1,0 @@
-Um tipo de dados bastante usado no dia a dia são as strings, ou cadeias de caracteres (ou sequências de caracteres). 
