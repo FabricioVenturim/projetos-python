@@ -1,3 +1,3 @@
 import ler_arquivos
 
-ler_arquivos.interface
+ler_arquivos.interface()
