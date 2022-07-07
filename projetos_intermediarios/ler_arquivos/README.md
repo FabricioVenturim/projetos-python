@@ -1,3 +1,5 @@
+Repositório original: https://github.com/FabricioVenturim/ler-edita-arquivos
+
 Para executar o programa, é necessário apenas rodar o arquivo main.py da pasta. Ela chamará a função interface do módulo ler_arquivos.
 
 projeto:
