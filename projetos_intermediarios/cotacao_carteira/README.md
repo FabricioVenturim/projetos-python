@@ -1,4 +1,7 @@
 <h1 align="center">PROJETO PY.BANK - A2 IC</h1>
+
+Repositório original: https://github.com/atronee/A2-IC-Python
+
 Para executar o programa, é necessário rodar o arquivo main.py da pasta. Nele há apenas um código que chamará a função interface do módulo.
 
 ## Objetivo:
