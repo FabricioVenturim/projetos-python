@@ -1,5 +1,7 @@
 ## Calculadora de Sistemas - Método de Gauss-Jordan
 
+repositório original: https://github.com/FabricioVenturim/calculadora-de-sistemas
+
 Uma matriz está na forma escalonada reduzida quando ela satisfaz as seguintes condições:
 
 1. O primeiro elemento não-nulo de cada linha não-nula (chamado o pivô da linha) é igual a 1.
