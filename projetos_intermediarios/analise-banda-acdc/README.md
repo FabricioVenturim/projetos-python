@@ -1,5 +1,7 @@
 <h1 align="center">Analise Banda AC/DC - A1 LP</h1>
 
+#### Link do Repositório original: https://github.com/FabricioVenturim/analise-banda-acdc
+
 ## Repositório de criação do banco de dados da discografia da banda AC/DC e análise exploratória e visualização dos dados.
 
 
